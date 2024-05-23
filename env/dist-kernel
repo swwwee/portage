@@ -1,0 +1,2 @@
+# enables llvm with gentoo dist kernel
+LLVM=1

@@ -1,0 +1,4 @@
+# llvm-bootstrap
+
+LDFLAGS="-fuse-ld=lld -rtlib=compiler-rt -unwind-lib=libunwind -Wl,--as-needed"
+# linker flags, required to bootstrap llvm

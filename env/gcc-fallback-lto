@@ -1,0 +1,23 @@
+# - gcc fallback with lto - #
+# alternative to clang with lto
+
+# - flags
+
+# warning flags
+WARNING_FLAGS="-Werror=odr -Werror=lto-type-mismatch -Werror=strict-aliasing"
+# cflags
+COMMON_FLAGS="-flto=7 -march=alderlake -mtune=intel -O2 -pipe ${WARNING_FLAGS}"
+CFLAGS="${COMMON_FLAGS}"
+CXXFLAGS="${COMMON_FLAGS}"
+FCFLAGS="${COMMON_FLAGS}"
+FFLAGS="${COMMON_FLAGS}"
+# linker flags
+LDFLAGS="-Wl,--as-needed"
+
+# compiler envs
+CC="gcc"
+CXX="g++"
+CPP="gcc -E"
+AR="ar"
+NM="nm"
+RANLIB="ranlib"

@@ -1,0 +1,21 @@
+# - gcc fallback w/o lto - #
+# alternative to clang w/o lto
+
+# - flags
+
+# cflags
+COMMON_FLAGS="-march=alderlake -mtune=intel -O2 -pipe"
+CFLAGS="${COMMON_FLAGS}"
+CXXFLAGS="${COMMON_FLAGS}"
+FCFLAGS="${COMMON_FLAGS}"
+FFLAGS="${COMMON_FLAGS}"
+# linker flags
+LDFLAGS="-Wl,--as-needed"
+
+# compiler envs
+CC="gcc"
+CXX="g++"
+CPP="gcc -E"
+AR="ar"
+NM="nm"
+RANLIB="ranlib"

@@ -1,0 +1,12 @@
+# - llvm w/o lto - #
+
+# - flags
+# cflags
+COMMON_FLAGS="-march=native -mtune=native -O2 -pipe"
+CFLAGS="${COMMON_FLAGS}"
+CXXFLAGS="${COMMON_FLAGS}"
+FCFLAGS="${COMMON_FLAGS}"
+FFLAGS="${COMMON_FLAGS}"
+
+# - portage
+USE="${USE} -lto"
